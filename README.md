@@ -2,5 +2,5 @@
 
 ### Live version
 
-#### See [Vue Calendar](https://gabrrrielll.github.io/) <br
+#### See [Vue Calendar](https://gabrrrielll.github.io/)
 
