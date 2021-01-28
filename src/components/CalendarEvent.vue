@@ -32,7 +32,8 @@ export default {
   methods: {
     getColor(event) {
       var color = event;
-      return "green";
+      event? color = event : color = "green";
+      return color;
     },
     remove(idDay, id) {
       if (window.confirm("Are you sure ?"))
@@ -43,7 +44,7 @@ export default {
     edit(idDay, id) {
       var day = store.state.seedData.find(el => el.id === idDay);
       var event = day.events.find(elem => elem.id === id);
-
+      //window.console.log("element de editat:", event);
       event.edit = true;
       store.state.info = "Modify event details";
     }
@@ -58,6 +59,7 @@ export default {
   display: flex;
   justify-content: space-between;
   min-width: 150px;
+  border-radius: 0 0 5px 5px;
 }
 p.text {
   width: 80%;
@@ -74,6 +76,7 @@ p.time {
   line-height: 20px;
   border: 1px solid black;
   margin-top: -13px;
+  border-radius: 5px 5px 0 0;
 }
 .event-full {
   box-shadow: 3px 5px 1px #00000025;
